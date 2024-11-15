@@ -1,0 +1,44 @@
+{
+  "name": "@orwoods/networking-example",
+  "version": "1.0.0",
+  "description": "Example",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orwoods/networking-example.git"
+  },
+  "homepage": "https://github.com/orwoods/networking-example#readme",
+  "bugs": {
+    "url": "https://github.com/orwoods/networking-example/issues"
+  },
+  "scripts": {
+    "build-proto": "./node_modules/.bin/build-proto-cli src/proto"
+  },
+  "keywords": [
+    "grpc",
+    "protobuf",
+    "kafka",
+    "networking",
+    "typescript"
+  ],
+  "author": "@orwoods",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@orwoods/networking": "3.4.17"
+  },
+  "devDependencies": {
+    "@types/node": "22.7.6",
+    "@typescript-eslint/parser": "8.10.0",
+    "eslint": "9.13.0",
+    "eslint-plugin-import": "2.31.0",
+    "ts-node": "10.9.2",
+    "typescript": "5.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

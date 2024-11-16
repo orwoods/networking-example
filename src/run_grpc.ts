@@ -5,7 +5,7 @@ import { GetOrderRequest } from './proto/generated/ordersService_pb';
 // Server-side
 (async () => {
   const server = new Server();
-  await server.init();
+  await server.start();
 })();
 
 // Client-side

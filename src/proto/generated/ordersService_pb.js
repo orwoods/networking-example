@@ -97,7 +97,7 @@ proto.orders_service_api.GetOrderRequest.prototype.toObject = function(opt_inclu
  */
 proto.orders_service_api.GetOrderRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, "")
+    orderId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -136,7 +136,7 @@ proto.orders_service_api.GetOrderRequest.deserializeBinaryFromReader = function(
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setId(value);
+      msg.setOrderId(value);
       break;
     default:
       reader.skipField();
@@ -167,7 +167,7 @@ proto.orders_service_api.GetOrderRequest.prototype.serializeBinary = function() 
  */
 proto.orders_service_api.GetOrderRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getId();
+  f = message.getOrderId();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -178,10 +178,10 @@ proto.orders_service_api.GetOrderRequest.serializeBinaryToWriter = function(mess
 
 
 /**
- * optional string id = 1;
+ * optional string order_id = 1;
  * @return {string}
  */
-proto.orders_service_api.GetOrderRequest.prototype.getId = function() {
+proto.orders_service_api.GetOrderRequest.prototype.getOrderId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -190,7 +190,7 @@ proto.orders_service_api.GetOrderRequest.prototype.getId = function() {
  * @param {string} value
  * @return {!proto.orders_service_api.GetOrderRequest} returns this
  */
-proto.orders_service_api.GetOrderRequest.prototype.setId = function(value) {
+proto.orders_service_api.GetOrderRequest.prototype.setOrderId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 

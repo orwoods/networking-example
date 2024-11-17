@@ -1,13 +1,13 @@
-import { GrpcServer } from '@orwoods/networking';
+import { GrpcServer, wait } from '@orwoods/networking';
 import { IOrdersServer, IOrdersService, OrdersService } from '../proto/generated/ordersService_grpc_pb';
 import { GetOrderResponse } from '../proto/generated/ordersService_pb';
 
 export class Server extends GrpcServer <IOrdersServer, IOrdersService> {
   public constructor () {
     super(OrdersService, {
-      getOrder: (call, callback) => {
+      getOrder: async (call, callback) => {
         console.warn(new Date(), 'Request from the client:', {
-          id: call.request.getId(),
+          id: call.request.getOrderId(),
         });
 
         const order = new GetOrderResponse();

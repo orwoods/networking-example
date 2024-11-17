@@ -15,7 +15,7 @@ setTimeout(async () => {
 
   setInterval(async () => {
     const request = new GetOrderRequest();
-    request.setId('example-id');
+    request.setOrderId('example-id');
 
     try {
       const order = await client.getOrder(request);
@@ -24,7 +24,7 @@ setTimeout(async () => {
       }
 
       console.warn(new Date(), 'Response from the server:', {
-        id: request.getId(),
+        id: request.getOrderId(),
         status: order.getStatus(),
       });
     } catch (error) {

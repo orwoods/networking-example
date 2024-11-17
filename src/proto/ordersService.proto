@@ -6,7 +6,7 @@ service Orders {
 }
 
 message GetOrderRequest {
-  string id = 1;
+  string order_id = 1;
 }
 
 message GetOrderResponse {

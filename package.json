@@ -28,7 +28,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@orwoods/networking": "3.4.23"
+    "@orwoods/networking": "3.4.30"
   },
   "devDependencies": {
     "@types/node": "22.7.6",

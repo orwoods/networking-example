@@ -11,7 +11,7 @@ import { GetOrderRequest } from './proto/generated/ordersService_pb';
 // Client-side
 setTimeout(async () => {
   const client = new Client();
-  await client.init();
+  await client.connect();
 
   setInterval(async () => {
     const request = new GetOrderRequest();
@@ -19,6 +19,9 @@ setTimeout(async () => {
 
     try {
       const order = await client.getOrder(request);
+      if (!order) {
+        throw new Error('Unknown order');
+      }
 
       console.warn(new Date(), 'Response from the server:', {
         id: request.getId(),
